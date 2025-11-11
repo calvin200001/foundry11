@@ -33,6 +33,7 @@ export default function FoundryElevenLanding() {
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
         {/* Animated Grid Background */}
         <div className="absolute inset-0 opacity-20">
+          <img src="/hero.png" alt="Background handshake" className="absolute inset-0 w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>

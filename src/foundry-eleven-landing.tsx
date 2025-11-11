@@ -28,12 +28,12 @@ export default function FoundryElevenLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 font-sans antialiased">
+    <div className="min-h-screen bg-slate-900 font-opensans antialiased">
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
         {/* Animated Grid Background */}
         <div className="absolute inset-0 opacity-20">
-          <img src="/hero.png" alt="Background handshake" className="absolute inset-0 w-full h-full object-cover opacity-15" />
+          <img src="/hero.png" alt="Background handshake" className="absolute inset-0 w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -60,7 +60,7 @@ export default function FoundryElevenLanding() {
                 <span>Trusted by 500+ Education Agencies Worldwide</span>
               </div>
               
-              <h1 className="text-white text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+              <h1 className="text-white text-5xl lg:text-7xl font-montserrat font-bold leading-tight tracking-tight">
                 Expand Your Agency —
                 <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-blue-400 bg-clip-text text-transparent"> Partner With Trust</span>
               </h1>
@@ -130,7 +130,7 @@ export default function FoundryElevenLanding() {
       </section>
 
       {/* Intro Paragraph */}
-      <section className="py-24 bg-slate-950 relative">
+      <section className="py-24 bg-slate-900 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950"></div>
         <div className="container mx-auto px-6 lg:px-24 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -142,7 +142,7 @@ export default function FoundryElevenLanding() {
       </section>
 
       {/* Why Partner With Us */}
-      <section id="why-partner" className="py-32 bg-slate-950 relative overflow-hidden">
+      <section id="why-partner" className="py-32 bg-slate-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-violet-500/10 rounded-full filter blur-3xl"></div>
@@ -152,9 +152,7 @@ export default function FoundryElevenLanding() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
               <Award size={16} />
-              <span>Partnership Benefits</span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+            <h2 className="text-5xl lg:text-6xl font-montserrat font-bold text-white mb-6 tracking-tight">
               Why Partner With Us
             </h2>
             <p className="text-slate-400 text-xl max-w-3xl mx-auto font-light">
@@ -201,7 +199,7 @@ export default function FoundryElevenLanding() {
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 backdrop-blur-sm transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-500">{card.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-4 leading-tight">
+                <h3 className="text-xl font-montserrat font-bold text-white mb-4 leading-tight">
                   {card.title}
                 </h3>
                 <p className="text-slate-400 leading-relaxed font-light">
@@ -258,7 +256,7 @@ export default function FoundryElevenLanding() {
                 <Sparkles size={16} />
                 <span>Get Started Today</span>
               </div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+              <h2 className="text-5xl lg:text-6xl font-montserrat font-bold text-white mb-6 tracking-tight">
                 Apply to Become a Partner Agent
               </h2>
               <p className="text-slate-300 text-xl font-light">
@@ -389,11 +387,11 @@ export default function FoundryElevenLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-20">
+      <footer className="bg-slate-900 border-t border-slate-800 py-20">
         <div className="container mx-auto px-6 lg:px-24">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">Foundry Eleven</h3>
+              <h3 className="text-3xl font-montserrat font-bold text-white mb-4 tracking-tight">Foundry Eleven</h3>
               <p className="text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto font-light">
                 Foundry Eleven is a U.S.-based company helping creative and community colleges reach qualified international students. Partner institutions include NYFA, Ohlone College, and Glendale Community College.
               </p>

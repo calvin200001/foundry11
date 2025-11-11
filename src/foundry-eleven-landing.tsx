@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CheckCircle, Globe, Users, TrendingUp, Award, ArrowRight } from 'lucide-react';
 
 export default function FoundryElevenLanding() {
@@ -12,13 +12,15 @@ export default function FoundryElevenLanding() {
     agreedToTerms: false
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert('Thank you for your interest! Our team will contact you within 24 hours.');
   };
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked; // Safely access checked
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
@@ -59,14 +61,20 @@ export default function FoundryElevenLanding() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  onClick={() => document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => {
+                    const element = document.getElementById('form-section');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   Join the Network
                   <ArrowRight size={20} />
                 </button>
                 <button 
-                  onClick={() => document.getElementById('why-partner').scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => {
+                    const element = document.getElementById('why-partner');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
                 >
                   Learn More
@@ -224,7 +232,7 @@ export default function FoundryElevenLanding() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
                     Full Name *
@@ -313,7 +321,7 @@ export default function FoundryElevenLanding() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows="4"
+                    rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
                     placeholder="Tell us about your agency and experience..."
                   ></textarea>
@@ -334,12 +342,12 @@ export default function FoundryElevenLanding() {
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Join the Network
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

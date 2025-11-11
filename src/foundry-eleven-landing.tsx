@@ -152,6 +152,8 @@ export default function FoundryElevenLanding() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
               <Award size={16} />
+              <span>Partnership Benefits</span>
+            </div>
             <h2 className="text-5xl lg:text-6xl font-montserrat font-bold text-white mb-6 tracking-tight">
               Why Partner With Us
             </h2>
